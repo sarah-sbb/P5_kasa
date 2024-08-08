@@ -1,0 +1,19 @@
+.header {
+    height: 70px;
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            font-weight: 600;
+        }
+    }
+}

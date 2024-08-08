@@ -1,0 +1,20 @@
+body {
+    font-family: $font-primary;
+    color: $default;
+    padding: 20px 60px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $default;
+}
+
+.home {
+    margin: 0;
+    padding: 0;
+    height: 0;
+}
