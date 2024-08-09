@@ -3,12 +3,12 @@ import Cards from '../components/Cards';
 
 const Home = () => {
   const cardData = [
-    { title: 'Location 1', image: '/path/to/image1.jpg' },
-    { title: 'Location 2', image: '/path/to/image2.jpg' },
-    { title: 'Location 3', image: '/path/to/image3.jpg' },
-    { title: 'Location 4', image: '/path/to/image4.jpg' },
-    { title: 'Location 5', image: '/path/to/image5.jpg' },
-    { title: 'Location 6', image: '/path/to/image6.jpg' },
+    { title: 'Titre de la location', image: '/path/to/image1.jpg' },
+    { title: 'Titre de la location', image: '/path/to/image2.jpg' },
+    { title: 'Titre de la location', image: '/path/to/image3.jpg' },
+    { title: 'Titre de la location', image: '/path/to/image4.jpg' },
+    { title: 'Titre de la location', image: '/path/to/image5.jpg' },
+    { title: 'Titre de la location', image: '/path/to/image6.jpg' },
   ];
 
   return (

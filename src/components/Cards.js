@@ -9,7 +9,6 @@ const Cards = ({ cardData }) => {
           <div key={index} className="card">
             <div className="card-content">
               <h3 className="card-title">{card.title}</h3>
-              <p className="card-description">{card.description}</p>
             </div>
           </div>
         ))}

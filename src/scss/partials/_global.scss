@@ -1,33 +1,26 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+
 body {
-    font-family: $font-primary;
-    color: $default;
-    padding: 20px 60px;
+  font-family: "Montserrat", sans-serif;
+  color: #000;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
-    color: $default;
+  text-decoration: none;
+  color: #000;
 }
 
-.home {
-    margin: 0;
-    padding: 0;
-    height: 0;
-}
-
-/* App.css */
 .app {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Assure que la hauteur de l'application couvre toute la fenêtre */
-  }
-  
-  .main-content {
-    flex: 1; /* Permet au contenu de remplir l'espace restant */
-    padding: 20px; /* Ajoute un espace autour du contenu */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Assure que l'application couvre toute la hauteur de la vue
+}
+
+.main-content {
+  flex: 1; // Permet au contenu principal de remplir l'espace restant
+  padding: 20px 60px;
+}
