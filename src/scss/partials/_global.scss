@@ -18,3 +18,16 @@ a {
     padding: 0;
     height: 0;
 }
+
+/* App.css */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Assure que la hauteur de l'application couvre toute la fenêtre */
+  }
+  
+  .main-content {
+    flex: 1; /* Permet au contenu de remplir l'espace restant */
+    padding: 20px; /* Ajoute un espace autour du contenu */
+  }
+  

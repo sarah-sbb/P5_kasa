@@ -1,12 +1,21 @@
 import React from 'react';
 import '../App.css';
 
-const Card = () => {
+const Cards = ({ cardData }) => {
   return (
-    <div>
-      <h1>Card</h1>
-    </div>
+    <section className='section-cards'>
+      <div className="cards">
+        {cardData.map((card, index) => (
+          <div key={index} className="card">
+            <div className="card-content">
+              <h3 className="card-title">{card.title}</h3>
+              <p className="card-description">{card.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default Card;
+export default Cards;

@@ -1,16 +1,21 @@
 import React from 'react';
-import Banner from '../components/Banner';
+import Cards from '../components/Cards';
 
 const Home = () => {
   const cardData = [
-    { title: 'Location 1', description: 'Description 1', image: '/path/to/image1.jpg' },
-    { title: 'Location 2', description: 'Description 2', image: '/path/to/image2.jpg' },
-    // Ajoutez d'autres données de cartes ici
+    { title: 'Location 1', image: '/path/to/image1.jpg' },
+    { title: 'Location 2', image: '/path/to/image2.jpg' },
+    { title: 'Location 3', image: '/path/to/image3.jpg' },
+    { title: 'Location 4', image: '/path/to/image4.jpg' },
+    { title: 'Location 5', image: '/path/to/image5.jpg' },
+    { title: 'Location 6', image: '/path/to/image6.jpg' },
   ];
 
   return (
     <div className="home">
-      <Banner/>
+      <div className="cards-container">
+        <Cards cardData={cardData} />
+      </div>
     </div>
   );
 };

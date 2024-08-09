@@ -1,11 +1,13 @@
+// Logements.js
 import React from 'react';
 
-const Logement = () => {
+const Logements = () => {
   return (
     <div>
-      <h1>Fiche logement</h1>
+      {/* Autres éléments spécifiques à la page Logements */}
+      <h1>Nos logements</h1>
     </div>
   );
 };
 
-export default Logement;
+export default Logements;

@@ -3,7 +3,8 @@ import React from 'react';
 const About = () => {
   return (
     <div>
-      <h1>A propos</h1>
+      {/* Autres éléments spécifiques à la page About */}
+      <h1>A propos de nous</h1>
     </div>
   );
 };
