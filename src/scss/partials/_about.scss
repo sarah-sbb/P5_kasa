@@ -1,0 +1,46 @@
+.accordion-container {
+    margin: 0 40px;
+
+    .accordion-toggle {
+        display: none;
+
+        &:checked + .accordion-header + .accordion-content {
+            max-height: 1000px; // Une grande valeur pour assurer que tout le contenu soit visible
+            padding: 20px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &:checked + .accordion-header i {
+            transform: rotate(180deg);
+        }
+    }
+
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $primary;
+        border-radius: 5px;
+        padding: 0 20px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    i {
+        transition: transform 0.3s ease;
+    }
+}
