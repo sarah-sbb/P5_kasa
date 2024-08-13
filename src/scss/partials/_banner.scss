@@ -38,3 +38,23 @@
       margin: 0;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .main-content {
+      padding: 0 20px;
+    }
+
+    .section-hero {
+      margin: 20px 0;
+
+      img {
+        height: 110px;
+      }
+  
+      .hero_title {
+        font-size: 1.5rem;
+        text-align: left;
+        margin-left: 10px ;
+      }
+    }
+  }

@@ -12,6 +12,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 50px;
+        margin-top: 40px;
     
     //Grid 1
     
@@ -19,12 +20,11 @@
             color: $primary;
             font-size: 36px;
             font-weight: 500;
-            margin-bottom: 0;
+            margin: 0;
         }
     
         .ville {
-            font-size: 18px;
-            font-weight: 500;
+            @include text;
             margin-top: 0;
         } 
     
@@ -43,7 +43,7 @@
                 width: 115px;
                 height: 25px;
                 text-align: center;
-                border-radius: 10px;
+                border-radius: 20px;
             }
         }
 
@@ -60,6 +60,14 @@
         }
 
         .identity {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            p { 
+                @include text($primary);
+                margin-right: 10px;
+            }
 
             .circle {
                 content: "";
@@ -72,10 +80,16 @@
 
         .star {
             display: flex;
+            justify-content: flex-end;
 
             li {
                 margin-left: 5px;
             }
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+
+    
 }

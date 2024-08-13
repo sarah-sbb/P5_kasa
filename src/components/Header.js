@@ -10,7 +10,7 @@ const Header = () => {
           <div className="navbar_logo">
             <img src={logo} alt="logo de kasa" />
           </div>
-            <ul className="navbar_link">
+            <ul className="navbar-link">
               <li className="nav-item"><Link to="/">Accueil</Link></li>
               <li className="nav-item"><Link to="../About">A propos</Link></li>
             </ul>   

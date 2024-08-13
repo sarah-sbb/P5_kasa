@@ -5,7 +5,7 @@
         display: none;
 
         &:checked + .accordion-header + .accordion-content {
-            max-height: 1000px; // Une grande valeur pour assurer que tout le contenu soit visible
+            max-height: 1000px; 
             padding: 20px;
             opacity: 1;
             visibility: visible;
@@ -42,5 +42,15 @@
 
     i {
         transition: transform 0.3s ease;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .accordion-container {
+        margin: 0;
+
+        .accordion-header {
+            font-size: 14px;
+        }
     }
 }
