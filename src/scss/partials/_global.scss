@@ -29,10 +29,10 @@ a {
 .app {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; // Assure que l'application couvre toute la hauteur de la vue
+  min-height: 100vh; 
 }
 
 .main-content {
-  flex: 1; // Permet au contenu principal de remplir l'espace restant
+  flex: 1; 
   padding: 20px 60px;
 }

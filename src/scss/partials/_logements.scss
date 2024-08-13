@@ -1,0 +1,81 @@
+.logements {
+
+    .slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 415px;
+        background-color: $secondary;
+    }
+    
+    .ficheLogement {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    
+    //Grid 1
+    
+        h1 {
+            color: $primary;
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+    
+        .ville {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 0;
+        } 
+    
+        .categories {
+            display: flex;
+            margin: 0 0 20px 0;
+            padding: 0;
+    
+            li {
+                background-color: $primary;
+                color: #fff;
+                font-weight: bold;
+                font-size: 14px;
+                margin-right: 20px;
+                padding-top: 5px;
+                width: 115px;
+                height: 25px;
+                text-align: center;
+                border-radius: 10px;
+            }
+        }
+
+        .accordion-container {
+            margin: 0;
+            width: 100%;
+        }
+
+    // Grid 2
+        .fiche-grid-2 {
+            display: flex;
+            flex-direction: flex-end;
+            flex-direction: column;
+        }
+
+        .identity {
+
+            .circle {
+                content: "";
+                background-color: $secondary;
+                border-radius: 50px;
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        .star {
+            display: flex;
+
+            li {
+                margin-left: 5px;
+            }
+        }
+    }
+}
