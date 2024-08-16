@@ -13,11 +13,9 @@ const Cards = () => {
     <section className='section-cards'>
       <div className="cards">
         {logements.map((logement, index) => (
-          <div key={index} className="card" onClick={() => handleClick(logement.id)}>
-            <div className="card-content">
-              <img src={logement.cover} alt={logement.title} className="card-image" />
-              <h3 className="card-title">{logement.title}</h3>              
-            </div>
+          <div key={index} className="card" onClick={() => handleClick(logement.id)}>              
+              <img src={logement.cover} alt={logement.title} className="card-image" /> 
+              <h3 className="card-title">{logement.title}</h3> 
           </div>
         ))}
       </div>
