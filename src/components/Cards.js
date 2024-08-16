@@ -1,14 +1,22 @@
 import React from 'react';
-import '../App.css';
+import { useNavigate } from 'react-router-dom';
+import logements from '../logements.json';
 
-const Cards = ({ cardData }) => {
+const Cards = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (id) => {
+    navigate(`/logement/${id}`);
+  };
+
   return (
     <section className='section-cards'>
       <div className="cards">
-        {cardData.map((card, index) => (
-          <div key={index} className="card">
+        {logements.map((logement, index) => (
+          <div key={index} className="card" onClick={() => handleClick(logement.id)}>
             <div className="card-content">
-              <h3 className="card-title">{card.title}</h3>
+              <img src={logement.cover} alt={logement.title} className="card-image" />
+              <h3 className="card-title">{logement.title}</h3>              
             </div>
           </div>
         ))}

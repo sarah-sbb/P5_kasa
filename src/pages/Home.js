@@ -2,21 +2,15 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Cards from '../components/Cards';
 
+import bannerSea from '../images/banner_sea.jpg';
+
 const Home = () => {
-  const cardData = [
-    { title: 'Titre de la location', image: '/path/to/image1.jpg' },
-    { title: 'Titre de la location', image: '/path/to/image2.jpg' },
-    { title: 'Titre de la location', image: '/path/to/image3.jpg' },
-    { title: 'Titre de la location', image: '/path/to/image4.jpg' },
-    { title: 'Titre de la location', image: '/path/to/image5.jpg' },
-    { title: 'Titre de la location', image: '/path/to/image6.jpg' },
-  ];
 
   return (
     <div className="home">
-      <Banner />
-      <div className="cards-container">
-        <Cards cardData={cardData} />
+      <Banner image={bannerSea} title="Chez vous, partout et ailleurs" />
+        <div className="cards-container">
+          <Cards/>
       </div>
     </div>
   );
