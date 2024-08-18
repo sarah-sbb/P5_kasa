@@ -58,16 +58,27 @@
   .section-cards {
     padding: 0;
     margin-bottom: 20px;
-  
+
     .cards {
-      gap: 10px;
+      flex-direction: column; 
+      align-items: center; 
     }
-  
+
     .card {
-      flex-basis: none;
-      flex: none;
-      height: 225px;
+      flex: 1 1 100%; 
       width: 100%;
+      max-width: 100%; 
+      height: auto; 
+
+      .card-image {
+        height: 200px; 
+      }
+
+      .card-title {
+        width: auto; 
+        left: 15px; 
+        bottom: 15px; 
+      }
     }
-  }    
+  }
 }

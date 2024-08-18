@@ -1,15 +1,28 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import logements from '../logements.json';
 
 const FicheLogement = () => {
-  const { id } = useParams();
-  const logement = logements.find(logement => logement.id === id);
+  const { title } = useParams();
+  const navigate = useNavigate();
+  
+  // Décoder le titre de l'URL
+  const decodedTitle = decodeURIComponent(title);
+  
+  // Trouver le logement correspondant au titre
+  const logement = logements.find(logement => logement.title === decodedTitle);
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  useEffect(() => {
+    if (!logement) {
+      // Redirection vers la page 404 si le logement n'est pas trouvé
+      navigate('/404');
+    }
+  }, [logement, navigate]);
+
   if (!logement) {
-    return <div>Logement non trouvé</div>;
+    return null; // ou un loader si vous préférez
   }
 
   const handlePrevClick = () => {
@@ -53,7 +66,11 @@ const FicheLogement = () => {
 
         <div className="aside">
           <div className="identity">
-            <p>{logement.host.name}</p>
+            <div className="name">
+              {logement.host.name.split(' ').map((namePart, index) => (
+                <p key={index}>{namePart}</p>
+              ))}
+            </div>
             <span className="circle"><img src={logement.host.picture} alt={logement.host.name} /></span>
           </div>
           <ul className="star">

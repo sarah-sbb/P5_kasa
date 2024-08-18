@@ -21,12 +21,16 @@
         justify-content: space-between;
         align-items: center;
         background-color: $primary;
-        border-radius: 5px;
+        border-radius: 10px;
         padding: 0 20px;
         color: #fff;
         font-size: 24px;
         font-weight: bold;
         cursor: pointer;
+
+        p {
+            margin: 15px 0;
+        }
     }
 
     .accordion-content {
