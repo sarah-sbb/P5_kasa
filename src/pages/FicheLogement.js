@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import Slider from '../components/Slider';
 import { useParams, useNavigate } from 'react-router-dom';
 import logements from '../logements.json';
 
 const FicheLogement = () => {
-  const { title } = useParams();
+  const { id } = useParams(); // Utilisation de l'ID au lieu du titre
   const navigate = useNavigate();
   
-  // Décoder le titre de l'URL
-  const decodedTitle = decodeURIComponent(title);
-  
-  // Trouver le logement correspondant au titre
-  const logement = logements.find(logement => logement.title === decodedTitle);
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // Trouver le logement correspondant à l'ID
+  const logement = logements.find(logement => logement.id === id);
 
   useEffect(() => {
     if (!logement) {
@@ -25,33 +21,9 @@ const FicheLogement = () => {
     return null; // ou un loader si vous préférez
   }
 
-  const handlePrevClick = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? logement.pictures.length - 1 : prevIndex - 1
-    );
-  };
-
-  const handleNextClick = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === logement.pictures.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
   return (
     <div className="logements">
-      <div className="slider">
-        <img src={logement.pictures[currentImageIndex]} alt={`Slide ${currentImageIndex + 1}`} className="slider-image" />
-        {logement.pictures.length > 1 && (
-          <>
-            <button className="slider-angle left" onClick={handlePrevClick}>
-              <i className="fa-solid fa-angle-left"></i>
-            </button>
-            <button className="slider-angle right" onClick={handleNextClick}>
-              <i className="fa-solid fa-angle-right"></i>
-            </button>
-          </>
-        )}
-      </div>
+      <Slider pictures={logement.pictures} />
 
       <section className="informations">
         <div className="info-header">
