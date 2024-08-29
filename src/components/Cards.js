@@ -5,8 +5,8 @@ import logements from '../logements.json';
 const Cards = () => {
   const navigate = useNavigate();
 
-  const handleClick = (id) => { // Changer le paramètre de title à id
-    navigate(`/logement/${id}`); // Utilisation de l'ID dans la navigation
+  const handleClick = (id) => { 
+    navigate(`/logement/${id}`); 
   };
 
   return (

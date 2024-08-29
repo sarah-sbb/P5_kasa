@@ -18,7 +18,7 @@ const FicheLogement = () => {
   }, [logement, navigate]);
 
   if (!logement) {
-    return null; // ou un loader si vous préférez
+    return null; 
   }
 
   return (
